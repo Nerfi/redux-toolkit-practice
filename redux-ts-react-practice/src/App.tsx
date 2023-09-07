@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-     <h1>Book finder appaasdasd redux toolkit</h1>
+     <h1>Book finderc comitted ? </h1>
     </>
   )
 }
