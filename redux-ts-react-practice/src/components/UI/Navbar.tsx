@@ -2,22 +2,35 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
+    <nav style={{ border: "solid red", padding: "1rem" }}>
+      <ul style={{ display: "flex", justifyContent: "space-around" }}>
+        <li style={linkStyles}>
+          <Link to="/" style={linkStyles}>
+            Home
+          </Link>
         </li>
-        <li>
-          <Link to="/books">Books</Link>
+        <li style={linkStyles}>
+          <Link to="/books" style={linkStyles}>
+            Books
+          </Link>
         </li>
-        <li>
-          <Link to="/favorites">Your Favorites</Link>
+        <li style={linkStyles}>
+          <Link to="/favorites" style={linkStyles}>
+            Your Favorites
+          </Link>
         </li>
 
-        <li>
-          <Link to="/login" replace={true}>Login</Link>
+        <li style={linkStyles}>
+          <Link to="/login" replace={true} style={linkStyles}>
+            Login
+          </Link>
         </li>
       </ul>
     </nav>
   );
 }
+
+const linkStyles = {
+  listStyle: "none",
+  textDecoration: "none",
+};
